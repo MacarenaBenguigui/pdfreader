@@ -14,14 +14,14 @@ html_hide = f"""
 <link rel="shortcut icon" type="image/png" href="{icon_url}">
 </head>
 <style>
-    /* Ocultar la barra de herramientas de Streamlit */
-    [data-testid="stToolbar"] {{visibility: hidden !important;}}
-    /* Ocultar el menú principal de Streamlit */
+
+    #[data-testid="stToolbar"] {{visibility: hidden !important;}}
+
     #MainMenu {{visibility: hidden;}}
-    /* Ocultar el pie de página de Streamlit */
-    footer {{visibility: hidden !important;}}
-    /* Ocultar el encabezado de Streamlit (si es necesario, ya que no hay un selector específico para el encabezado) */
-    /* #header {{visibility: hidden;}} */
+
+    #footer {{visibility: hidden !important;}}
+  
+    #header {{visibility: hidden;}} 
 </style>
 """
 
