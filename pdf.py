@@ -8,7 +8,7 @@ from llama_index.agent import ReActAgent
 from llama_index.llms.openai import OpenAI
 from llama_index import StorageContext, VectorStoreIndex, load_index_from_storage
 from llama_index.readers import PDFReader
-from html_code import icon_url, title_html, generate_html_with_icon
+from html_code import icon_url, title_html, generate_html_with_icon, html_hide
 
 load_dotenv()
 
