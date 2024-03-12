@@ -31,8 +31,8 @@ tools = [
 llm = OpenAI(model = "gpt-3.5-turbo-16k")
 agent = ReActAgent.from_tools(tools, llm = llm, verbose =True, context= context)
 
-query_icon_url = "https://i.postimg.cc/mDCmmtp8/Logo2-sinfondo-x1024.png"
-response_icon_url = "https://i.postimg.cc/hts2XXfd/pngaaa-com-3704853.png"
+query_icon_url = "https://www.vhv.rs/dpng/d/509-5097256_new-svg-image-login-logo-user-icon-hd.png"
+response_icon_url = "https://i.postimg.cc/mDCmmtp8/Logo2-sinfondo-x1024.png"
 
 # Interfaz de usuario para ingreso de consultas
 st.set_page_config (page_title= "InnevaChatBot", page_icon=icon_url, layout="wide")
