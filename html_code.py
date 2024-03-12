@@ -9,7 +9,7 @@ title_html = f"""
 </div>
 """
 
-html_code = f"""
+html_hide = f"""
 <head>
 <link rel="shortcut icon" type="image/png" href="{icon_url}">
 </head>
