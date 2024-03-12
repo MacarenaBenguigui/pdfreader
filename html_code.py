@@ -15,13 +15,13 @@ html_hide = f"""
 </head>
 <style>
 
-    #[data-testid="stToolbar"] {{visibility: hidden !important;}}
+    [data-testid="stToolbar"] {{visibility: hidden !important;}}
 
-    #MainMenu {{visibility: hidden;}}
+    MainMenu {{visibility: hidden;}}
 
-    #footer {{visibility: hidden !important;}}
+    footer {{visibility: hidden !important;}}
   
-    #header {{visibility: hidden;}} 
+    header {{visibility: hidden;}} 
 </style>
 """
 
