@@ -8,6 +8,7 @@ from llama_index.agent import ReActAgent
 from llama_index.llms.openai import OpenAI
 from llama_index import StorageContext, VectorStoreIndex, load_index_from_storage
 from llama_index.readers import PDFReader
+from html_code import icon_url, title_html, generate_html_with_icon
 
 load_dotenv()
 
@@ -51,21 +52,12 @@ tools = [
 llm = OpenAI(model = "gpt-3.5-turbo-16k")
 agent = ReActAgent.from_tools(tools, llm = llm, verbose =True, context= context)
 
-
-
+query_icon_url = "https://i.postimg.cc/mDCmmtp8/Logo2-sinfondo-x1024.png"
+response_icon_url = "https://i.postimg.cc/hts2XXfd/pngaaa-com-3704853.png"
 
 # Interfaz de usuario para ingreso de consultas
-st.set_page_config (page_title= "InnevaChatBot", page_icon = ":desktop_computer:", layout="wide")
-st.title ("InnevaChatBot:desktop_computer:")
-hide_streamlit_style = """
-            <style>
-            [data-testid="stToolbar"] {visibility: hidden !important;}
-            MainMenu {visibility: hidden;}
-            footer {visibility: hidden !important;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.set_page_config (page_title= "InnevaChatBot", page_icon=icon_url, layout="wide")
+st.markdown(title_html, unsafe_allow_html=True)
 # Usa la clave 'query_input' para manejar el estado del input del usuario
 user_query = st.text_input("¿En que puedo ayudarte hoy?")
 
@@ -82,6 +74,10 @@ if user_query:
 
 # Muestra las consultas y respuestas previas
 for pair in st.session_state['queries']:
-    st.markdown(f":speech_balloon: {pair['query']}")
-    st.markdown(f":robot_face: {pair['response']}")
-    st.write("---")  # Solo para añadir una línea divisoria por estética
+     # Generar y mostrar el HTML para la consulta y la respuesta
+    query_html = generate_html_with_icon(query_icon_url, pair["query"],icon_size="50px")
+    response_html = generate_html_with_icon(response_icon_url, pair["response"],icon_size="50px")
+
+    st.markdown(query_html, unsafe_allow_html=True)
+    st.markdown(response_html, unsafe_allow_html=True)
+    st.write("---")  # Para añadir una línea divisoria por estética
