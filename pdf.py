@@ -58,7 +58,8 @@ response_icon_url = "https://i.postimg.cc/hts2XXfd/pngaaa-com-3704853.png"
 # Interfaz de usuario para ingreso de consultas
 st.set_page_config (page_title= "InnevaChatBot", page_icon=icon_url, layout="wide")
 st.markdown(title_html, unsafe_allow_html=True)
-# Usa la clave 'query_input' para manejar el estado del input del usuario
+st.markdown(html_hide, unsafe_allow_html=True)
+
 user_query = st.text_input("¿En que puedo ayudarte hoy?")
 
 if 'queries' not in st.session_state:
