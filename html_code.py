@@ -9,6 +9,24 @@ title_html = f"""
 </div>
 """
 
+html_code = f"""
+<head>
+<link rel="shortcut icon" type="image/png" href="{icon_url}">
+</head>
+<style>
+    /* Ocultar la barra de herramientas de Streamlit */
+    [data-testid="stToolbar"] {{visibility: hidden !important;}}
+    /* Ocultar el menú principal de Streamlit */
+    #MainMenu {{visibility: hidden;}}
+    /* Ocultar el pie de página de Streamlit */
+    footer {{visibility: hidden !important;}}
+    /* Ocultar el encabezado de Streamlit (si es necesario, ya que no hay un selector específico para el encabezado) */
+    /* #header {{visibility: hidden;}} */
+</style>
+"""
+
+
+
 def generate_html_with_icon(icon_url, text, icon_size="100px", text_margin="20px", space_between="30px", text_size="20px"):
     """Genera una cadena HTML para mostrar un ícono y texto con tamaño, margen, espacio entre conjuntos personalizados y tamaño de texto."""
     html_string = f'''
