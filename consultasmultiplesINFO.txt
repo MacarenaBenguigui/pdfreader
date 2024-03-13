@@ -1,0 +1,33 @@
+def query_engine_selector(user_query):
+    # Definir palabras clave para cada motor de consulta especializado
+    keywords = {
+        "portfolio_data": ["portfolio", "innevapharma", "investments"],
+        "adjuvant_data": ["adjuvant", "additive"],
+        "suppplement_data": ["supplement", "vitamin", "nutrient"],
+        "opdivo_data": ["opdivo", "medication", "treatment"]
+    }
+    
+    # Intentar encontrar un motor de consulta especializado basado en palabras clave
+    for engine_name, engine_keywords in keywords.items():
+        if any(keyword in user_query.lower() for keyword in engine_keywords):
+            for tool in tools:
+                if tool.metadata.name == engine_name:
+                    return tool.query_engine.query(user_query)
+    
+    # Si no se encuentra un motor de consulta especializado, usar ChatGPT por defecto
+    response_object = chatgpt.query(user_query)  # Asume que 'chatgpt' es una instancia de tu conexión a GPT-3 o ChatGPT
+    return response_object.response
+
+# Luego, en tu flujo principal, llamas a esta función para procesar las consultas
+def submit_text():
+    user_query = st.session_state.widget.strip()
+    if user_query:  
+        response_text = query_engine_selector(user_query)
+        
+        # Añade la consulta y respuesta al estado de la sesión
+        st.session_state['queries'].append({'query': user_query, 'response': response_text})
+        
+        # Limpia el campo de entrada
+        st.session_state.widget = ""
+
+# Asumiendo que el resto de tu configuración de Streamlit y la lógica del estado de la sesión ya están en su lugar...

@@ -14,17 +14,16 @@ html_hide = f"""
 <link rel="shortcut icon" type="image/png" href="{icon_url}">
 </head>
 <style>
-
-    #[data-testid="stToolbar"] {{visibility: hidden !important;}}
-
+    /* Ocultar la barra de herramientas de Streamlit */
+    [data-testid="stToolbar"] {{visibility: hidden !important;}}
+    /* Ocultar el menú principal de Streamlit */
     #MainMenu {{visibility: hidden;}}
-
-    #footer {{visibility: hidden !important;}}
-  
-    #header {{visibility: hidden;}} 
+    /* Ocultar el pie de página de Streamlit */
+    footer {{visibility: hidden !important;}}
+    /* Ocultar el encabezado de Streamlit (si es necesario, ya que no hay un selector específico para el encabezado) */
+    /* #header {{visibility: hidden;}} */
 </style>
 """
-
 
 
 def generate_html_with_icon(icon_url, text, icon_size="100px", text_margin="20px", space_between="30px", text_size="20px"):
@@ -36,3 +35,15 @@ def generate_html_with_icon(icon_url, text, icon_size="100px", text_margin="20px
     </div>
     '''
     return html_string
+
+
+#Si se quiere poner el input de entrada dl usuario abajo del todo, pero no se mueve el boton
+styl = """
+<div style="display: flex; flex-direction: column; height: 100vh; justify-content: flex-end;">
+    <form action="/action_page.php">
+        <label for="fname">¿En qué puedo ayudarte hoy?</label><br>
+        <input type="text" id="query" name="query"><br>
+        <input type="submit" value="Enviar">
+    </form> 
+</div>
+"""
