@@ -87,9 +87,10 @@ def submit_text():
     st.session_state.widget = ""
     if user_query:
          with st.spinner("Pensando..."):
+            full_query = f"{context} [La respuesta debe ser en español] {user_query}"
             update_context_with_query(user_query, "")
             try:
-                response_object = agent.query(f"{st.session_state.get('context', '')} {user_query}")
+                response_object = agent.query(full_query)
                 response_text = response_object.response if hasattr(response_object, 'response') else "Respuesta no disponible"
                 update_context_with_query(user_query, response_text)
             except Exception as e:
