@@ -41,7 +41,17 @@ suppplement_engine = suppplement_index.as_query_engine()
 
 
 adjuvant_path = os.path.join("data", "Adjuvant Nivolumab in Resected Esophageal  or Gastroesophageal Junction Cancer.pdf")
-adjuvant_df = PDFReader().load_data(file=adjuvant_path)
+adjuvant_pdf = PDFReader().load_data(file=adjuvant_path)
 adjuvant_index = get_index(adjuvant_pdf, "adjuvant")
 adjuvant_index = adjuvant_index.as_chat_engine()
+
+plantilla_path = os.path.join("data", "plantilla_inneva.pdf")
+plantilla_pdf = PDFReader().load_data(file=plantilla_path)
+plantilla_index = get_index(plantilla_pdf, "plantilla")
+plantilla_index = plantilla_index.as_chat_engine()
+
+ejercicios_path = os.path.join("data", "Ejercicios Sala 2_v4 - con textos.pdf")
+ejercicios_pdf = PDFReader().load_data(file=ejercicios_path)
+ejercicios_index = get_index(ejercicios_pdf, "ejercicios")
+ejercicios_index = ejercicios_index.as_chat_engine()
 
