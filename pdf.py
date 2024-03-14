@@ -79,8 +79,7 @@ def update_context_with_query(user_query, response_text):
     new_entry = {"query": user_query, "response": response_text}
     st.session_state['chat_history'].append(new_entry)
     # Re-construir y actualizar el contexto basado en el historial de chat completo
-    st.session_state['context'] = "\n".join([f"Pregunta: {entry['query']}\nRespuesta: {entry['response']}" for entry in st.session_state['chat_history']])
-
+    st.session_state['context'] = context +"\n" + "\n".join([f"Pregunta: {entry['query']}\nRespuesta: {entry['response']}" for entry in st.session_state['chat_history']])
 
 # Función para manejar la entrada de consulta y añadirla a 'queries'
 def submit_text():
