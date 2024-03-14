@@ -103,14 +103,6 @@ def update_context_with_query(user_query, response_text):
 
 
 
-#def update_context_with_query(user_query, response_text):
-    new_context = ""
-    for interaction in st.session_state['chat_history']:
-        new_context += f"Pregunta: {interaction['query']} Respuesta: {interaction['response']} "
-    
-    return new_context
-
-
 # Función para manejar la entrada de consulta y añadirla a 'queries'
 def submit_text():
     st.session_state.input_disabled = True
@@ -133,7 +125,6 @@ def submit_text():
 
 query_icon_url = "https://i.postimg.cc/15Q5F7Dd/imgbin-avatars-icon-businesswoman-icon-social-icon-png.png"
 response_icon_url = "https://i.postimg.cc/mDCmmtp8/Logo2-sinfondo-x1024.png"
-
 
 
 
