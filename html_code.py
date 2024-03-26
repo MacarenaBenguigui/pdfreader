@@ -14,10 +14,10 @@ html_hide = f"""
 <link rel="shortcut icon" type="image/png" href="{icon_url}">
 </head>
 <style>
-    #[data-testid="stToolbar"] {{visibility: hidden !important;}}
-    #MainMenu {{visibility: hidden;}}
-    #footer {{visibility: hidden !important;}}
-    #header {{visibility: hidden;}} 
+    [data-testid="stToolbar"] {{visibility: hidden !important;}}
+    MainMenu {{visibility: hidden;}}
+    footer {{visibility: hidden !important;}}
+    header {{visibility: hidden;}} 
 
     /* Aquí añades el nuevo estilo para ocultar la barra inferior, si fuera necesario */
     .wrapper {{
