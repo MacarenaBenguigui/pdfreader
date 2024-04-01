@@ -65,7 +65,7 @@ def main():
     st.markdown(title_html, unsafe_allow_html=True)
     st.markdown(html_hide, unsafe_allow_html=True)
     st.sidebar.header("Instrucciones")
-    st.sidebar.write("Preguntale a InnevaPharma cualquier cosa que desees saber. Ten en cuenta que nuestra IA requiere tiempo para poder contestar a sus preguntas de la mejor forma possible.")
+    st.sidebar.write("Preguntale a InnevaPharma cualquier cosa que desees saber. Ten en cuenta que nuestra IA requiere tiempo para poder contestar a sus preguntas de la mejor forma posible.")
     st.sidebar.image("https://i.postimg.cc/8cvFBVvQ/Logo-sinfondo-x1024.png")
 
 
