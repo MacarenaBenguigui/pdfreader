@@ -1,10 +1,10 @@
 
-icon_url = "https://i.postimg.cc/3xmDbwRF/logo-mychat-ia-ok-horizontal.png"
+icon_url = "https://i.postimg.cc/KYN3WRZT/logo-mychat-ia-ok-horizontal-AZUL.png"
 
 # HTML para el título e ícono
 title_html = f"""
 <div style="font-size: 35px; font-weight: bold; display: flex; align-items: center;">
-    <img src="{icon_url}" style="width: 500px; margin-right: 15px;">
+    <img src="{icon_url}" style="width: 400px; margin-right: 15px;">
 </div>
 """
 
