@@ -61,7 +61,7 @@ def process_query(user_query):
 
 
 def main():
-    st.set_page_config(page_title="InnevaChatBot", page_icon=icon_url, layout="centered")
+    st.set_page_config(page_icon=icon_url, layout="centered")
     st.markdown(title_html, unsafe_allow_html=True)
     st.markdown(html_hide, unsafe_allow_html=True)
     st.sidebar.header("Instrucciones")
