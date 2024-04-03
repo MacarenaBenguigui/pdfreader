@@ -17,7 +17,7 @@ def load_data():
 
 def process_query(user_query):
     user_image_url = "https://i.postimg.cc/15Q5F7Dd/imgbin-avatars-icon-businesswoman-icon-social-icon-png.png"
-    assistant_image_url = "https://i.postimg.cc/mDCmmtp8/Logo2-sinfondo-x1024.png"
+    assistant_image_url = "https://i.postimg.cc/MZPvpQNG/icon-1.png"
 
     if 'thread' not in st.session_state:
         st.session_state.thread = st.session_state.client.beta.threads.create()
@@ -66,7 +66,7 @@ def main():
     st.markdown(html_hide, unsafe_allow_html=True)
     st.sidebar.header("Instrucciones")
     st.sidebar.write("Preguntale a InnevaPharma cualquier cosa que desees saber. Ten en cuenta que nuestra IA requiere tiempo para poder contestar a sus preguntas de la mejor forma posible.")
-    st.sidebar.image("https://i.postimg.cc/8cvFBVvQ/Logo-sinfondo-x1024.png")
+    st.sidebar.image("https://i.postimg.cc/3xmDbwRF/logo-mychat-ia-ok-horizontal.png")
 
 
     if 'client' not in st.session_state:
