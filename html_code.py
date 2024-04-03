@@ -1,5 +1,5 @@
 
-icon_url = "https://i.postimg.cc/mDCmmtp8/Logo2-sinfondo-x1024.png"
+icon_url = "https://i.postimg.cc/3xmDbwRF/logo-mychat-ia-ok-horizontal.png"
 
 # HTML para el título e ícono
 title_html = f"""
